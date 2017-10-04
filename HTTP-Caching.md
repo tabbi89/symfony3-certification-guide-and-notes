@@ -35,7 +35,7 @@ In-app caching lives in your infrastructure and interacts with your application 
 * **Private** - Private caches are caches that are unique to a specific user. They live on the client-end. Your browser is a private cache; it will cache responses unique to the sites you visit.
 Making a response (web page, api-response, etc) cacheable is part of the HTTP cache mechanism. Which cache mechanisms you use depends on your use case.
 
-[This and more about cache types](http://fideloper.com/quick-caching-explanation)
+[source - and more about cache types](http://fideloper.com/quick-caching-explanation)
 
 #### You should know
 
