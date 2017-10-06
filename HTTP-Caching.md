@@ -93,7 +93,7 @@ Making a response (web page, api-response, etc) cacheable is part of the HTTP ca
 
 * [what is the difference between validation and expiration model][val-1]
 * that validation model saves CPU
-* [what mean 304 Status code and what is returned in response body][https://symfony.com/doc/3.0/http_cache/validation.html]
+* [what mean 304 Status code and what is returned in response body][val-6]
 * that there are ETag and Last-Modified headers in validation model
 * [how in Symfony looks validation with ETag header][val-2]
 * [how in Symfony looks validation with Last-Modified header][val-3]
@@ -106,6 +106,7 @@ Making a response (web page, api-response, etc) cacheable is part of the HTTP ca
 [val-3]: https://symfony.com/doc/3.0/http_cache/validation.html#validation-with-the-last-modified-header
 [val-4]: http://api.symfony.com/3.0/Symfony/Component/HttpFoundation/Response.html#method_isNotModified
 [val-5]: https://symfony.com/doc/3.0/http_cache/validation.html#optimizing-your-code-with-validation
+[val-6]: https://symfony.com/doc/3.0/http_cache/validation.html
 
 ### Client side caching
 ### Server side caching
