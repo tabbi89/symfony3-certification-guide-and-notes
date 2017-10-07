@@ -5,10 +5,15 @@
 * [Error handling](#error-handling)
 * [Code debugging](#code-debugging)
 * [Deployment best practices](#deployment-best-practices)
+* [Process](#process)
+* [Serializer](#serializer)
+* [Data collectors](#data)
+* [Web Profiler and Web Debug Toolbar](#profiler)
+* [Internationalization and localization](#intl)
 
 #### Extras
 
-* Katas (TODO)
+* [Katas](#katas)
 
 ## Error handling <a id="error-handling"></a>
 
@@ -44,6 +49,68 @@
 
 ## Deployment best practices <a id="deployment-best-practices"></a>
 
+#### Links
+
 * [http://symfony.com/doc/3.0/deployment.html][doc-3]
 
 [doc-3]: http://symfony.com/doc/3.0/deployment.html
+
+#### You should know
+
+* [common Post-Deployment Tasks][dp-1]
+* [how to optimze autoloader][dp-2]
+* [how to use composer classmap][dp-3]
+* that default, the Symfony Standard Edition uses Composer's autoloader in the autoload.php file
+
+[dp-1]: http://symfony.com/doc/3.0/deployment.html#common-post-deployment-tasks
+[dp-2]: http://symfony.com/doc/3.0/deployment.html#c-install-update-your-vendors
+[dp-3]: https://symfony.com/doc/current/performance.html#use-composer-s-class-map-functionality
+
+## Process <a id="process"></a>
+
+#### Links
+
+* [http://symfony.com/doc/3.0/components/process.html][doc-4]
+
+[doc-4]: http://symfony.com/doc/3.0/components/process.html
+
+## Serializer <a id="serializer"></a>
+
+#### Links
+
+* [http://symfony.com/doc/3.0/serializer.html][doc-5]
+* [http://symfony.com/doc/3.0/components/serializer.html][doc-6]
+
+[doc-5]: http://symfony.com/doc/3.0/serializer.html
+[doc-6]: http://symfony.com/doc/3.0/components/serializer.html
+
+## Data collectors <a id="data"></a>
+
+#### Links
+
+* http://symfony.com/doc/3.0/profiler/data_collector.html
+
+## Web Profiler and Web Debug Toolbar <a id="profiler"></a>
+
+#### Links
+
+* http://symfony.com/doc/3.0/reference/configuration/web_profiler.html
+
+## Internationalization and localization <a id="intl"></a>
+
+#### Links
+
+* http://symfony.com/doc/3.0/translation.html
+* http://symfony.com/doc/3.0/best_practices/i18n.html
+
+## Katas <a id="katas"></a>
+
+* Override all error pages and exceptions and test them
+* Play with serializer (create custom normalizers, add groups)
+* Play with pluralization and translations in twig
+	* Change translations domain
+	* Change directory where are located translations
+	* Debug missing translations
+* Create custom data collector
+	* Discover symfony data collectors  	
+
