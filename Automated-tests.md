@@ -6,16 +6,16 @@
 * [Functional tests with PHPUnit](#functional-tests)
 * [Client object](#client-object)
 * [Crawler object](#crawler-object)
-* Profile object
-* Framework objects access
-* Client configuration
+* [Profiler object](#profiler-object)
+* [Framework objects access](#framework-objects-access)
+* [Client configuration](#client-configuration)
 * Request and response objects introspection
-* PHPUnit bridge
+* [PHPUnit bridge](#phpunit-bridge)
 * Handling legacy deprecated code
 
 #### Extras
 
-* Katas
+* Katas (TODO)
 
 
 ## Unit tests with PHPUnit <a id="unit-tests"></a>
@@ -105,3 +105,88 @@
 * [http://symfony.com/doc/3.0/testing.html#the-crawler][doc-4]
 
 [doc-4]: http://symfony.com/doc/3.0/testing.html#the-crawler
+
+#### You should know
+
+* [how to traverse the DOM of an HTML/XML document][co-1]
+* [how to extract information][co-2]
+* [how to use links][co-3]
+* [how to use forms][co-4]
+
+
+[co-1]: http://symfony.com/doc/3.0/testing.html#traversing
+[co-2]: http://symfony.com/doc/3.0/testing.html#extracting-information
+[co-3]: http://symfony.com/doc/3.0/testing.html#links
+[co-4]: http://symfony.com/doc/3.0/testing.html#forms
+
+## Profiler object <a id="profiler-object"></a>
+
+#### Links
+
+* [http://symfony.com/doc/3.0/testing.html#accessing-the-profiler-data][doc-5]
+* [http://symfony.com/doc/3.0/testing/profiling.html][doc-6]
+
+[doc-5]: http://symfony.com/doc/3.0/testing.html#accessing-the-profiler-data
+[doc-6]: http://symfony.com/doc/3.0/testing/profiling.html
+
+#### You should know
+
+* that profiler is enabled in test environment
+* [how to speed up test bu not collecting profiler data][po-1]
+* that when you disable collecting data in configuration you can enable it per test `$client->enableProfiler()`
+
+[po-1]: http://symfony.com/doc/3.0/testing/profiling.html#speeding-up-tests-by-not-collecting-profiler-data
+
+## Framework objects access <a id="framework-objects-access"></a>
+
+#### Links
+
+* [http://symfony.com/doc/3.0/testing.html#accessing-internal-objects][doc-7]
+* [http://symfony.com/doc/3.0/testing.html#accessing-the-container][doc-8]
+
+[doc-7]: http://symfony.com/doc/3.0/testing.html#accessing-internal-objects
+[doc-8]: http://symfony.com/doc/3.0/testing.html#accessing-the-container
+
+#### You should know
+
+* that to get container you can use `$client->getContainer()`
+* that when you use `$client->insulate()` or using real HTTP requests returned container will be different
+
+## Client configuration <a id="client-configuration"></a>
+
+#### Links
+
+* [http://symfony.com/doc/3.0/testing.html#testing-configuration][doc-9]
+
+[doc-9]: http://symfony.com/doc/3.0/testing.html#testing-configuration
+
+#### You should know
+
+* that by default swiftmailer delivery is disabled
+* [that in the test env you shoulde have enabled `framework.test`][cc-1]
+* [how to configure client][cc-2]
+
+[cc-1]: http://symfony.com/doc/3.0/reference/configuration/framework.html#reference-framework-test
+[cc-2]: https://github.com/symfony/framework-bundle/blob/3.0/Test/WebTestCase.php#L31
+
+## PHPUnit bridge <a id="phpunit-bridge"></a>
+
+#### Links
+
+* [http://symfony.com/doc/3.0/components/phpunit_bridge.html][doc-10]
+
+[doc-10]: http://symfony.com/doc/3.0/components/phpunit_bridge.html
+
+#### You should know
+
+* what features it has
+* [how to mark tests as legacy][pb-1]
+* that `SYMFONY_DEPRECATIONS_HELPER` is set to 0 by default
+* that making `SYMFONY_DEPRECATIONS_HELPER` will make bridge to ignore any deprecation notices
+* that using this is usefull for deprecated interfaces
+* [how to work with time-sensitive tests][pb-2]
+* [that ClockMock mocks PHP built-in `time(), microtime(), sleep() and usleep()`][pb-3]
+
+[pb-1]: http://symfony.com/doc/3.0/components/phpunit_bridge.html#mark-tests-as-legacy
+[pb-2]: http://symfony.com/doc/3.0/components/phpunit_bridge.html#time-sensitive-tests
+[pb-3]: http://api.symfony.com/3.0/Symfony/Bridge/PhpUnit/ClockMock.html
