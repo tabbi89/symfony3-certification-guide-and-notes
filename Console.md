@@ -13,7 +13,7 @@
 
 #### Extras
 
-* [Katas](#summary-katas)
+* [Katas](#katas)
 
 
 ## Build-in commands <a id="built-in-commands"></a>
@@ -206,6 +206,15 @@ Symfony Standard Edition console commands (output of `php bin/console`):
 
 [doc-7]: http://symfony.com/doc/3.0/components/console/helpers/index.html
 
+Symfony 3 current available helpers:
+
+	Formatter Helper
+	Process Helper
+	Progress Bar
+	Question Helper
+	Table
+	Debug Formatter Helper
+
 ## Console events <a id="console-events"></a>
 
 #### Links
@@ -248,3 +257,14 @@ Symfony Standard Edition console commands (output of `php bin/console`):
 [vl-1]: http://symfony.com/doc/3.0/console/verbosity.html
 [vl-2]: http://api.symfony.com/3.0/Symfony/Component/Console/Output/OutputInterface.html#method_writeln
 [vl-3]: http://api.symfony.com/3.0/Symfony/Component/Console/Output/Output.html#method_isQuiet
+
+## Katas <a id="katas"></a>
+
+* Create custom command in Symfony Standard Edition
+	1. Discover how they are automatically autoloaded in Bundle
+	2. Register 3 listeners for all console events and play with them
+	3. Add container to command
+	4. Use all verbosity levels in command
+	5. Add arguments and use short syntax for them
+	6. Add options and play with all of them
+	7. Add `--` to separate options and arguments 

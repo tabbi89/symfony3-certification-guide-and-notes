@@ -30,12 +30,13 @@ In-app caching lives in your infrastructure and interacts with your application 
 
 **HTTP Caching** is mostly done by third-parties. They can potentially save requests from ever reaching your server by responding to a request itself.
 
-* **Proxy** - A proxy cache is a public, shared cache often employed by an ISP or large corporation. Because they are employed at a high-level, they can (and do) cache thousands of various websites.
+* **Proxy** - A proxy cache is a public, shared cache often employed by an ISP or large corporation. Because they are employed at a high-level, they can (and do) cache thousands of various websites. Proxy caches are a type of shared cache.
 * **Gateway** - Similar to in-app caches, Gateway caches live as part of your infrastructure. They sit in front of your web-server and act much in the same way of proxy servers - except they are for your application(s) only. They are technically *reverse proxies, surrogate caches, or even HTTP accelerators*
-* **Private** - Private caches are caches that are unique to a specific user. They live on the client-end. Your browser is a private cache; it will cache responses unique to the sites you visit.
-Making a response (web page, api-response, etc) cacheable is part of the HTTP cache mechanism. Which cache mechanisms you use depends on your use case.
+* **Private** / **Browser** - Private caches are caches that are unique to a specific user. They live on the client-end. Your browser is a private cache; it will cache responses unique to the sites you visit.
+Making a response (web page, api-response, etc) cacheable is part of the HTTP cache mechanism. Which cache mechanisms you use depends on your use case. 
 
-[source - and more about cache types](http://fideloper.com/quick-caching-explanation)
+[source - and more about cache types](http://fideloper.com/quick-caching-explanation) and 
+[even more about browser proxy and gateway caches](https://www.mnot.net/cache_docs/)
 
 #### You should know
 
@@ -57,6 +58,9 @@ Making a response (web page, api-response, etc) cacheable is part of the HTTP ca
 * [that in debug mode symfony automatically adds X-Symfony-Cache header to the response to get information about hits and misses][1008]
 * [how with default Varnish configuration correctly forward IP in Symfony reverse proxy][1009]
 * that to trust all X-Forwarded-* headers you have to set it as Request::setTrustedProxies(Request::HEADER_X_FORWARDED_ALL)
+* that Cache-Control was introduced in HTTP 1.1
+* [that Cache invalidation is not part of the HTTP specification][10010]
+* that you should avoid cache invalidation when possible
 
 [1000]: http://fideloper.com/quick-caching-explanation
 [1001]: https://symfony.com/doc/current/http_cache.html#symfony-reverse-proxy
@@ -67,7 +71,8 @@ Making a response (web page, api-response, etc) cacheable is part of the HTTP ca
 [1006]: https://symfony.com/doc/current/http_cache/varnish.html
 [1007]: https://tools.ietf.org/html/rfc2616
 [1008]: https://symfony.com/doc/3.0/http_cache.html#symfony-reverse-proxy
-[1009]: http://symfony.com/doc/3.0/http_cache/varnish.html#make-symfony-trust-the-reverse-proxy 
+[1009]: http://symfony.com/doc/3.0/http_cache/varnish.html#make-symfony-trust-the-reverse-proxy
+[10010]: http://symfony.com/doc/3.0/http_cache/cache_invalidation.html
 
 ### Expiration <a id="expiration"></a>
 
@@ -75,7 +80,7 @@ Making a response (web page, api-response, etc) cacheable is part of the HTTP ca
 
 * [that expiration model is the most efficient and straightforward][10000]
 * that expiration model is over validation model
-* [that you can use both expiration and validation model][10000]
+* [that you can use both expiration and validation model][10006]
 * [that you can define HTTP cache headers using annotation][10001]
 * [what are headers for expiration][10002]
 * [what method should be call to set Cache-Control header for expiration][10004]
@@ -88,6 +93,7 @@ Making a response (web page, api-response, etc) cacheable is part of the HTTP ca
 [10003]: https://symfony.com/doc/3.0/http_cache/expiration.html#expiration-with-the-expires-header
 [10004]: https://symfony.com/doc/3.0/http_cache/expiration.html#expiration-with-the-cache-control-header
 [10005]: http://fideloper.com/quick-caching-explanation
+[10006]: https://tomayko.com/blog/2008/things-caches-do#combining-expiration-and-validation
 
 ### Validation <a id="validation"></a>
 
@@ -125,6 +131,7 @@ Making a response (web page, api-response, etc) cacheable is part of the HTTP ca
 * that variables passed to `render_esi` become part of the cache key so that you have unique caches for each combination of variables and values
 * that once you start using ESI, remember to always use the s-maxage directive instead of max-age. As the browser only ever receives the aggregated resource, it is not aware of the sub-components, and so it will obey the max-age directive and cache the entire page
 * [what options supports `render_esi`][esi-4]
+* that ESI request is a master request not a sub request
 
 [esi-1]: https://symfony.com/doc/3.0/http_cache/esi.html
 [esi-2]: https://symfony.com/doc/3.0/http_cache/esi.html#using-esi-in-symfony

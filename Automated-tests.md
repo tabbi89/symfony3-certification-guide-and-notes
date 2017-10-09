@@ -112,12 +112,14 @@
 * [how to extract information][co-2]
 * [how to use links][co-3]
 * [how to use forms][co-4]
+* [that when adding or removing collection of forms you have to add the values to the raw data array][co-5] 	
 
 
 [co-1]: http://symfony.com/doc/3.0/testing.html#traversing
 [co-2]: http://symfony.com/doc/3.0/testing.html#extracting-information
 [co-3]: http://symfony.com/doc/3.0/testing.html#links
 [co-4]: http://symfony.com/doc/3.0/testing.html#forms
+[co-5]: http://symfony.com/doc/3.0/testing.html#adding-and-removing-forms-to-a-collection
 
 ## Profiler object <a id="profiler-object"></a>
 

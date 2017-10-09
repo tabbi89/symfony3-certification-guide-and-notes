@@ -84,6 +84,24 @@
 [doc-5]: http://symfony.com/doc/3.0/serializer.html
 [doc-6]: http://symfony.com/doc/3.0/components/serializer.html
 
+#### You should know
+
+* that the serializer service is not available by default
+* [how to activate serializer][s-1]
+* that the serializer is used to turn objects into specific formats and vice versa
+* that encoders turn specific formats into arrays and vice versa
+* that normalizers turn specific objects into arrays and vice versa
+* [how function serialize() works][s-2]
+* [how function deserialize() works][s-3]
+* [that you can deserialize into existing object with `object_to_populate` flag][s-4]
+* [that it will serialize the same object 1 before considering it a circular reference][s-5]
+
+[s-1]: http://symfony.com/doc/3.0/serializer.html#activating-the-serializer
+[s-2]: http://api.symfony.com/3.0/Symfony/Component/Serializer/Serializer.html#method_serialize
+[s-3]: http://api.symfony.com/3.0/Symfony/Component/Serializer/Serializer.html#method_deserialize
+[s-4]: http://symfony.com/doc/3.0/components/serializer.html#deserializing-in-an-existing-object
+[s-5]: http://symfony.com/doc/3.0/components/serializer.html#handling-circular-references
+
 ## Data collectors <a id="data"></a>
 
 #### Links

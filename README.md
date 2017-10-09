@@ -8,7 +8,7 @@ Collections of links and notes based on the topics included in the Symfony 3 cer
 
 More info: https://sensiolabs.com/en/symfony/certification.html
 
-Inspired by the Symfony 3 certification guide of [raulconti](https://github.com/raulconti/symfony-3-certification-guide).
+Inspired by the Symfony 3 certification guide of [raulconti](https://github.com/raulconti/symfony-3-certification-guide) and [ThomasBerends](https://github.com/ThomasBerends/symfony-certification-preparation-list)
 
 * **PHP**
 * **HTTP**
