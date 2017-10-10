@@ -21,7 +21,7 @@ Inspired by the Symfony 3 certification guide of [raulconti](https://github.com/
 * **Forms**
 * **Data Validation**
 * **Dependency Injection**
-* **Security**
+* [**Security**](Security.md)
 * [**HTTP Caching**](HTTP-Caching.md)
 * [**Console**](Console.md)
 * [**Automated tests**](Automated-tests.md)
