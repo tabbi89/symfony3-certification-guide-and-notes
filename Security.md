@@ -62,3 +62,40 @@
 
 #### You should know
 
+* [that decision if user can have access to this resource is made by `AccessDecisionManagerInterface` -> `decide(TokenInterface $token, array $attributes, object $object = null)`][au-1]
+* [that strategies in voters][au-2]
+		affirmative (default) >= 1
+		consensus > more
+		unanimous = all
+		
+* that `VoterInterface` has method `vote(TokenInterface $token, $object, array $attributes)`
+		returns:
+		
+		VoterInterface::ACCESS_GRANTED = 1
+		VoterInterface::ACCESS_DENIED = -1
+		VoterInterface::ACCESS_ABSTAIN = 0
+		
+* that there is built-in `AuthenticatedVoter` and supports the attributes IS_AUTHENTICATED_FULLY, IS_AUTHENTICATED_REMEMBERED IS_AUTHENTICATED_ANONYMOUSLY
+* that there is built-in `RoleVoter` and supports attributes starting with `ROLE_*`
+* that there is built-in `RoleHierarchyVoter`
+* [that you can change the default strategy][au-3]
+* [that a custom voter needs to implement `VoterInterface` or extend `Voter`][au-4]
+		
+		abstract class Voter implements VoterInterface
+		{
+		    abstract protected function supports($attribute, $subject);
+		    abstract protected function voteOnAttribute($attribute, $subject, TokenInterface $token);
+		}
+		
+[au-1]: http://api.symfony.com/3.0/Symfony/Component/Security/Core/Authorization/AccessDecisionManagerInterface.html
+[au-2]: http://symfony.com/doc/3.0/components/security/authorization.html#access-decision-manager
+[au-3]: http://symfony.com/doc/3.0/security/voters.html#changing-the-access-decision-strategy
+[au-4]: http://symfony.com/doc/3.0/security/voters.html#the-voter-interface
+
+
+
+
+
+
+
+
