@@ -3,6 +3,7 @@
 #### Certification requirements
 
 * [Authentication](#authentication)
+* [Authorization](#authorization)
 
 #### Extras
 
@@ -50,3 +51,14 @@
 [a-6]: https://symfony.com/doc/3.0/components/security/firewall.html#entry-points
 [a-7]: https://github.com/symfony/security-http/blob/3.0/Firewall/AnonymousAuthenticationListener.php
 [a-8]: https://github.com/symfony/framework-bundle/blob/3.0/Controller/Controller.php#L324
+
+## Authorization <a id="authorization"></a>
+
+#### Links
+
+* <http://symfony.com/doc/3.0/components/security/authorization.html>
+* <http://symfony.com/doc/3.0/book/security.html#authorization>
+* <http://symfony.com/doc/3.0/cookbook/security/index.html#authorization-denying-access>
+
+#### You should know
+
