@@ -4,10 +4,19 @@
 
 * [Authentication](#authentication)
 * [Authorization](#authorization)
+* [Configuration](#configuration)
+* [Providers](#providers)
+* [Firewalls](#firewalls)
+* [Users](#users)
+* [Passwords encoders](#password-encoders)
+* [Roles](#roles)
+* [Access Control Rules](#access)
+* [Guard authenticators](#guard)
+* [Voters and voting strategies](#voters)
 
 #### Extras
 
-* Katas
+* Katas TODO
 
 ## Authentication <a id="authentication"></a>
 
@@ -91,6 +100,13 @@
 [au-2]: http://symfony.com/doc/3.0/components/security/authorization.html#access-decision-manager
 [au-3]: http://symfony.com/doc/3.0/security/voters.html#changing-the-access-decision-strategy
 [au-4]: http://symfony.com/doc/3.0/security/voters.html#the-voter-interface
+
+## Configuration <a id="configuration"></a>
+
+#### Links
+
+* <http://symfony.com/doc/3.0/reference/configuration/security.html>
+* <http://symfony.com/doc/3.0/security.html#initial-security-yml-setup-authentication>
 
 
 
