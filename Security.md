@@ -109,9 +109,60 @@
 * <http://symfony.com/doc/3.0/security.html#initial-security-yml-setup-authentication>
 
 
+#### You should know
+
+* that no pattern key matches all URLs in firewall
+* [that you can have multiple `providers` and if not configured in firewall always the first is taken into account (by default)][c-1]
+	* if you use chain_provider it will be used as default if it is first or explictly defined in firewall 
+
+[c-1]: http://symfony.com/doc/current/security/multiple_user_providers.html
+
+## Providers <a id="providers"></a>
+
+#### Links
+
+* <http://symfony.com/doc/3.0/security.html#where-do-users-come-from-user-providers>
+
+## Firewalls <a id="firewalls"></a>
+
+#### Links
+
+* <http://symfony.com/doc/3.0/components/security/firewall.html>
+
+## Users <a id="users"></a>
+
+#### Links
+
+* <http://symfony.com/doc/3.0/security.html#a-configuring-how-your-users-will-authenticate>
+* <http://symfony.com/doc/3.0/security.html#b-configuring-how-users-are-loaded>
+* <http://api.symfony.com/3.0/Symfony/Component/Security/Core/User/UserInterface.html>
+* <http://api.symfony.com/3.0/Symfony/Component/Security/Core/User/AdvancedUserInterface.html>
+
+## Passwords encoders <a id="passwords-encoders"></a>
+
+#### Links
+
+* <http://symfony.com/doc/3.0/security.html#c-encoding-the-user-s-password>
+* <http://api.symfony.com/3.0/Symfony/Component/Security/Core/Encoder/UserPasswordEncoderInterface.html>
+
+## Roles <a id="roles"></a>
+
+* <http://symfony.com/doc/3.0/components/security/authorization.html#roles>
+* <http://symfony.com/doc/3.0/security.html#roles>
+* <http://symfony.com/doc/3.0/security.html#hierarchical-roles>
 
 
+## Access Control Rules <a id="access"></a>
 
+* <http://symfony.com/doc/3.0/security.html#access-control-in-templates>
+* <http://symfony.com/doc/3.0/security.html#securing-url-patterns-access-control>
+* <http://symfony.com/doc/3.0/security.html#securing-controllers-and-other-code>
 
+## Guard authenticators <a id="guard"></a>
 
+* <http://symfony.com/doc/3.0/security/guard_authentication.html>
 
+## Voters and voting strategies <a id="voters"></a>
+
+* <http://symfony.com/doc/3.0/components/security/authorization.html#voters>
+* <http://symfony.com/doc/3.0/security/voters.html>
