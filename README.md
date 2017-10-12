@@ -20,7 +20,7 @@ Inspired by the Symfony 3 certification guide of [raulconti](https://github.com/
 * **Templating with Twig**
 * **Forms**
 * **Data Validation**
-* **Dependency Injection**
+* [**Dependency Injection**](#Dependency-Injection.md)
 * [**Security**](Security.md)
 * [**HTTP Caching**](HTTP-Caching.md)
 * [**Console**](Console.md)
