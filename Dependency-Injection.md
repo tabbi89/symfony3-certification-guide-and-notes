@@ -132,6 +132,18 @@
 
 * <http://symfony.com/doc/3.0/service_container/compiler_passes.html>
 
+#### You should know
+
+* separate compiler passes, you need to register them in the `build()` -> `$container->addCompilerPass`
+* [compiler pass can be defined in extension by implementing `CompilerPassInterface`][cpp-1]
+* that process() is called after all extensions are loaded
+* that the process() method in the extension class is called during the optimization step
+* work with services definition in a compiler pass and do not create service instances
+* [how to controll pass ordering][cpp-2]
+
+[cpp-1]: http://symfony.com/doc/3.0/components/dependency_injection/compilation.html#execute-code-during-compilation
+[cpp-2]: http://symfony.com/doc/3.0/components/dependency_injection/compilation.html#controlling-the-pass-ordering
+
 ## Services autowiring <a id="services-autowiring"></a>
 
 * <http://symfony.com/doc/3.0/components/dependency_injection/autowiring.html>
