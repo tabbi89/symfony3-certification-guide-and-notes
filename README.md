@@ -19,7 +19,7 @@ Inspired by the Symfony 3 certification guide of [raulconti](https://github.com/
 * **Routing**
 * **Templating with Twig**
 * **Forms**
-* **Data Validation**
+* [**Data Validation**](Data-Validation.md)
 * [**Dependency Injection**](Dependency-Injection.md)
 * [**Security**](Security.md)
 * [**HTTP Caching**](HTTP-Caching.md)
