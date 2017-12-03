@@ -17,7 +17,7 @@ Inspired by the Symfony 3 certification guide of [raulconti](https://github.com/
 * **Bundles**
 * **Controllers**
 * **Routing**
-* **Templating with Twig**
+* [**Templating with Twig**](Templating-with-Twig.md)
 * [**Forms**](Forms.md)
 * [**Data Validation**](Data-Validation.md)
 * [**Dependency Injection**](Dependency-Injection.md)
